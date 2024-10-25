@@ -87,7 +87,7 @@ a {
     }
     
     .SideMenuSection {
-      width: 70px;
+      display: none;
     }
     
     .SideMenuSection:hover {
@@ -120,20 +120,17 @@ a {
 
   /* KPI////////////////////////////////////////////////////////////// */
   .KpiSection {
-    width: 80%; 
-    margin: 0 auto;
-    padding: 20px;
+    background-color: red;
   }
-  .kpi-container {
+  .container {
     display: flex;
     flex-wrap: wrap; 
     justify-content: space-around;
-    gap: 20px; 
-    padding: 20px;
+    gap: 20px;
   }
   
   .kpi-item {
-    flex: 1 1 300px; 
+    flex: 1 1 400px; 
     min-width: 300px;
     padding: 10px;
     box-sizing: border-box;
@@ -144,4 +141,11 @@ a {
       flex: 1 1 100%;
     }
   }
-  
+  /*RecommendationSection On HomePage////////////////////////////////////////////*/
+  .recommendationSection{
+    border: 1px solid gray;
+    height: auto;
+    width: auto;
+    border-radius: 5px;
+    padding: 3em;
+  }

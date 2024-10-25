@@ -73,7 +73,7 @@ function KeyPerformanceIndicators({ labels, datasets }) {
   };
 
   return (
-    <div style={{ height: '400px' }}>
+    <div style={{ height: '500px' }}>
       <Line data={data} options={options} />
     </div>
   );
