@@ -1,37 +1,54 @@
 
 /* Side Menu Section -----------------------------------------------------------------*/
-a {
+ .SideMenuSection a {
     text-decoration: none;
     position: relative;
-    color: white;
+    color: rgb(48, 48, 48);
   }
-  
-  a::after {
+   .SideMenuSection a::after {
     content: '';
     position: absolute;
     left: 0;
     bottom: -2px; 
-    width: 100%;
+    width: 60%;
     height: 1px; 
-    background: white; 
+    background: rgb(0, 0, 0); 
     transform: scaleX(0);
     transition: transform 0.3s ease;
   }
   
-  a:hover::after,
-  a:focus::after {
+   .SideMenuSection a:hover::after,
+   .SideMenuSection a:focus::after {
     transform: scaleX(1);
+    width: 60%;
   }
-  
+   .SideMenuSection a:hover{
+    background-color: aliceblue;
+    width: 70%;
+    border-radius: 0 20px 20px 0;
+    transition: 0.5s easee;
+  }
+/* Home Section ///////////////////////////////////////////////////// */
+.homeSection, .growthSection, .kpiSection, .reportSection, .trendSection{
+  position: absolute;
+  right: 0;
+  top: 100px;
+  width: 90%;
+}
   /* Top Navbar */
   .TopNavBar {
     z-index: 40;
     height: 90px;
-    border-bottom: 5px solid rgb(250, 248, 248);
+    box-shadow: 0 0 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 4;
   }
   /* =============================================================================== */
   .SideMenuSection:not(.bottomSideBarElement):hover {
-    width: 270px;
+    width: 250px;
 }
 
   /* Side Menu */
@@ -40,6 +57,8 @@ a {
     height: 100vh;
     width: 90px;
     will-change: width;
+    position: fixed;
+    overflow: hidden;
   }
   .SideMenuSection:hover {
     width: 270px;
@@ -51,7 +70,7 @@ a {
   }
   .SideMenuSection .sideMenuText {
     display: none;
-    color: white;
+    color: rgb(0, 0, 0);
   
   }
   
@@ -93,9 +112,9 @@ a {
     .SideMenuSection:hover {
       width: 200px;
       transform: width 0.9s ease;
-    }
+    }   
   }
-  /* buttom sidebar element---------------------- */
+  /* buttom sidebar element //////////////////////////////////////////*/
   .bottomSideBarElement {
     position: absolute;
     bottom: 0;
@@ -116,36 +135,115 @@ a {
     transform: scale(1.1); 
    
   }
- 
 
   /* KPI////////////////////////////////////////////////////////////// */
-  .KpiSection {
-    background-color: red;
-  }
-  .container {
+  .kpi-ctn .container,.daylyPerformanceScore,  .section-2 .container {
     display: flex;
     flex-wrap: wrap; 
     justify-content: space-around;
     gap: 20px;
   }
-  
   .kpi-item {
     flex: 1 1 400px; 
     min-width: 300px;
     padding: 10px;
     box-sizing: border-box;
   }
-  
+  .DetailsLink{
+    text-decoration: none;
+    font-size: 1.1rem;
+    position: absolute;
+    right: 200px;
+    border: none;
+    background-color: aliceblue;
+  }
+  @media (max-width: 1000px) {
+    .homeSection, .growthSection, .kpiSection, .reportSection, .trendSection{
+      width: 100%;
+    }
+  }
   @media (max-width: 768px) {
     .kpi-item {
       flex: 1 1 100%;
     }
+ 
   }
+/* DropDown KPI filter/////////////////////////////////////////////////////////// */
+.dropDown{
+  position: relative;
+  display: inline-block;
+}
+.filterKpi{
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  color: rgb(8, 8, 8);
+  font-size: 1.1rem;
+  width: auto;
+}
+.filterMenu{
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  z-index: 1;
+}
+.filterMenu a{
+  display: block;
+  width: 100%;
+  padding: 8px;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+
+}
+.filterMenu a:hover{
+  background-color: rgb(206, 206, 206);
+}
   /*RecommendationSection On HomePage////////////////////////////////////////////*/
   .recommendationSection{
     border: 1px solid gray;
-    height: auto;
-    width: auto;
+    height: 100%;
     border-radius: 5px;
-    padding: 3em;
+    padding: 1.5em;
+  } 
+  /* PerformanceScore  file on home page //////////////////////////////////////// */
+  .PerformanceScore-container{
+    border: 1px solid gray;
+    border-radius: 5px;
+    height: auto;
+    text-align: center;
   }
+  .PerformanceScore-container:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 1px 2px;
+    transition: transform 0.5s ease;
+  }
+  /*download  Button Container for download ////////////////////////////////////////////////////////////// */
+ .download{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+ }
+ .buttonContainer button{
+    border: none;
+    background-color: rgb(49, 49, 49);
+    border-radius: 10px;
+    color: white;
+ }
+/*  Alerts Container for Notifications ////////////////////////////////////////////////////// */
+.alerts{
+  position: fixed;
+  bottom: 0;
+  right: 20px;
+}
+.alertSection button{
+  border: none;
+  background-color: rgb(92, 92, 92);
+  border-radius: 100%;
+  font-size: 1.4rem;
+  z-index: 2;
+}

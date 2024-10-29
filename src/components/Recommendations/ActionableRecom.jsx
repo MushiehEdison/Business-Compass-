@@ -1,10 +1,10 @@
 import React from "react";
 
-function ActionableRec(){
+function ActionableRec({Recommendation, titleRec}){
     return(
         <>
-        <div className="recommendationSection"> 
-            Lorem ipsum quaerat a molestiae maxime mollitia molestias! Delectus.
+        <div className="my-1"> 
+            {Recommendation}{titleRec}
         </div>
         </>
     );

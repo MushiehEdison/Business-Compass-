@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Motion, spring } from "react-motion"; 
 import { Link } from "react-router-dom"; 
 import '../../App.css'
 function SideMenuBar() {
@@ -15,7 +14,7 @@ function SideMenuBar() {
         <ul className="list-group w-100 mt-5 pt-5">
         <Link className="my-2 p-2" to="/">
           <li className="list-group-item d-flex align-items-center" style={{ background: 'none', border: 'none' }}>
-          <i class="fa-solid fa-house text-light me-e"></i>
+          <i class="fa-solid fa-house text-secondary me-e"></i>
             <span className="sideMenuText mx-3">Home</span>
           </li>
         </Link>
@@ -52,11 +51,6 @@ function SideMenuBar() {
               <Link to="#">
               <li className="d-flex align-items-center mx-3 ">
                 <i className="fa-solid fa-magnifying-glass text-secondary"></i>
-              </li>
-            </Link>
-            <Link to="#">
-              <li className="d-flex align-items-center mx-3">
-                <i className="fa-solid fa-bell text-secondary"></i>
               </li>
             </Link>
             <Link to="#">
