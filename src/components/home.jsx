@@ -3,8 +3,7 @@ import { Link } from "react-router-dom";
 import KeyPerformanceIndicators from "./KPIs/PerformanceIndicator";
 import ActionableRec from "./Recommendations/ActionableRecom";
 import PerformanceScore from "./KPIs/PerformanceScore";
-import Alert from "./Alerts/Alert";
-import Download from "./downloadReport/download";
+import Alert from "./PageComponents/Alert";
 
 function Home() {
   const performanceData = [
@@ -27,11 +26,8 @@ function Home() {
           <div className="alerts">
             <Alert/>
           </div>
-          <div className="download">
-            <Download />
-          </div>
       {/* Key Performance indicators ////////////////////////////////////////////// */}
-    <div className="section-1">
+    <div className="homeSection-1">
         <div className="title m-3">
             <span className="display-5 m-5">Company Performance </span>
          </div> 
@@ -52,13 +48,13 @@ function Home() {
                <Link className="DetailsLink p-3" to='/kpi'><span > Details </span></Link>
           </div> 
         {/* Actionalble Recommendations ///////////////////////////////////////////// */}
-      <div className="section-2">
+      <div className="homeSection-2 ">
          <div className="title m-5">
             <span className="display-5 m-3">Actionable Recommendations</span>
          </div>
         <div className="container">
           {Recommendation.map((data, index) => (
-            <div className="recommendationSection col" key={index}>
+            <div className="recommendationSection col-lg" key={index}>
               <span className="h3">< ActionableRec titleRec={data.titleRec}/></span>
                <ActionableRec Recommendation={data.Recommendation} />
             </div>

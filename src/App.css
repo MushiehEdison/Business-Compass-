@@ -10,9 +10,9 @@
     position: absolute;
     left: 0;
     bottom: -2px; 
-    width: 60%;
+    width: 70%;
     height: 1px; 
-    background: rgb(0, 0, 0); 
+    background: rgb(133, 133, 133); 
     transform: scaleX(0);
     transition: transform 0.3s ease;
   }
@@ -23,7 +23,6 @@
     width: 60%;
   }
    .SideMenuSection a:hover{
-    background-color: aliceblue;
     width: 70%;
     border-radius: 0 20px 20px 0;
     transition: 0.5s easee;
@@ -46,7 +45,7 @@
     right: 0;
     z-index: 4;
   }
-  /* =============================================================================== */
+/* =============================================================================== */
   .SideMenuSection:not(.bottomSideBarElement):hover {
     width: 250px;
 }
@@ -65,7 +64,7 @@
   }
 
   .SideMenuSection ul .list-group-item:hover{
-    transform: translateX(20px);
+    transform: translateX(10px);
     transition: transform 0.6s ease;
   }
   .SideMenuSection .sideMenuText {
@@ -113,7 +112,48 @@
       width: 200px;
       transform: width 0.9s ease;
     }   
-  }
+  } 
+
+/* SEARCH BAR ON NAVBAR   ////////////////////////////////////////////////////// */
+.search-container {
+  display: flex;
+  align-items: center;
+  width: 300px;
+  background-color: #ffffff;
+  border-radius: 25px;
+  overflow: hidden;
+  border: 2px solid #494949; 
+  position: absolute;
+  left: 30%;
+}
+
+.search-input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  border-radius: 25px 0 0 25px;
+}
+
+.search-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 50px;
+  background-color: #4e4e4e;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 0 25px 25px 0;
+}
+
+.search-button:focus {
+  outline: none;
+}
+
   /* buttom sidebar element //////////////////////////////////////////*/
   .bottomSideBarElement {
     position: absolute;
@@ -136,8 +176,8 @@
    
   }
 
-  /* KPI////////////////////////////////////////////////////////////// */
-  .kpi-ctn .container,.daylyPerformanceScore,  .section-2 .container {
+  /* KPI For Home Page////////////////////////////////////////////////////////////// */
+  .kpi-ctn .container,.daylyPerformanceScore,  .homeSection-2 .container {
     display: flex;
     flex-wrap: wrap; 
     justify-content: space-around;
@@ -148,6 +188,15 @@
     min-width: 300px;
     padding: 10px;
     box-sizing: border-box;
+    box-shadow: 0 0 3px gray;
+    border-radius: 10px;
+    height: 100%;
+  }
+  .kpi-item h3{
+    margin: 0.6em 0.5em;
+  }
+  .KPIcharts{
+
   }
   .DetailsLink{
     text-decoration: none;
@@ -155,29 +204,21 @@
     position: absolute;
     right: 200px;
     border: none;
-    background-color: aliceblue;
+    background-color: none;
   }
-  @media (max-width: 1000px) {
-    .homeSection, .growthSection, .kpiSection, .reportSection, .trendSection{
-      width: 100%;
-    }
-  }
-  @media (max-width: 768px) {
-    .kpi-item {
-      flex: 1 1 100%;
-    }
- 
-  }
-/* DropDown KPI filter/////////////////////////////////////////////////////////// */
+/* DropDown KPI filter For home Page/////////////////////////////////////////////////////////// */
 .dropDown{
   position: relative;
   display: inline-block;
 }
-.filterKpi{
+.filterKpi, .filterReport{
   padding: 10px;
+  margin: 10px 0;
+  background: rgb(243, 243, 243);
   border: none;
+  border-radius: 5px;
   cursor: pointer;
-  color: rgb(8, 8, 8);
+  color: rgb(0, 0, 0);
   font-size: 1.1rem;
   width: auto;
 }
@@ -186,7 +227,6 @@
   width: 100%;
   top: 100%;
   left: 0;
-  background-color: white;
   z-index: 1;
 }
 .filterMenu a{
@@ -212,7 +252,7 @@
   } 
   /* PerformanceScore  file on home page //////////////////////////////////////// */
   .PerformanceScore-container{
-    border: 1px solid gray;
+    box-shadow: 0 0 2px gray;
     border-radius: 5px;
     height: auto;
     text-align: center;
@@ -230,7 +270,7 @@
  }
  .buttonContainer button{
     border: none;
-    background-color: rgb(49, 49, 49);
+    background-color: rgb(27, 27, 27);
     border-radius: 10px;
     color: white;
  }
@@ -242,8 +282,97 @@
 }
 .alertSection button{
   border: none;
-  background-color: rgb(92, 92, 92);
+  background-color: rgb(39, 39, 39);
   border-radius: 100%;
   font-size: 1.4rem;
   z-index: 2;
+  box-shadow: 0 0 25px gray;
 }
+/* reports   On Reports Page///////////////////////////////////////////////////////// */
+.reportSection {
+  padding: 20px;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.controls button, .controls select {
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.report-details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.metrics-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.metrics-table th, .metrics-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.charts {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.chart {
+  flex: 1;
+  min-width: 300px;
+}
+.bar-chart{
+  border-radius: 10px;
+  box-shadow: 0 0 3px gray;
+  height: 100%;
+  padding: 50px;
+}
+.pie-chart{
+  border-radius: 10px;
+  box-shadow: 0 0 3px gray;
+  width: 75px;
+  height: 100%;
+  padding: 50px;
+}
+h1, h2, h3 {
+  color: #333;
+}
+
+/* Key Performance Indicators  Page ///////////////////////////////// */
+.kpiSection{
+  background-color: #333;
+}
+.kpiSection .section-1{
+  border: 1px solid ;
+  height: 100px;
+  width: 100%;
+
+}
+  /* Responsive tweaks */
+  @media (max-width: 992px) {
+    .TopNavbarElements {
+      justify-content: center;
+    }
+    
+    .SideMenuSection, .search-container {
+      display: none;
+    }
+    
+    .SideMenuSection:hover {
+      width: 200px;
+      transform: width 0.9s ease;
+    }   
+  } 

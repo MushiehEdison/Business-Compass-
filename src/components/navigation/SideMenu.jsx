@@ -21,25 +21,26 @@ function SideMenuBar() {
         <Link className="my-2 p-2" to="/kpis">
           <li className="list-group-item d-flex align-items-center" style={{ background: 'none', border: 'none' }}>
           <i class="fa-solid fa-chart-column text-info me-2"></i>
-            <span className="sideMenuText mx-3">KPIs</span>
+            <span className="sideMenuText mx-3">Analytics</span>
+          </li>
+        </Link>
+       
+        <Link className="my-2 p-2" to="/growth">
+          <li className="list-group-item d-flex align-items-center" style={{ background: 'none', border: 'none' }}>
+            <i className="fas fa-bullseye text-success me-2"></i>
+            <span className="sideMenuText mx-3">Industry <br /> insights</span>
+          </li>
+        </Link> 
+        <Link className="my-2 p-2" to="/trend">
+          <li className="list-group-item d-flex align-items-center" style={{ background: 'none', border: 'none' }}>
+            <i className="fas fa-chart-area text-primary me-2"></i>
+            <span className="sideMenuText mx-3">Risk <br />Management</span>
           </li>
         </Link>
         <Link className="my-2 p-2" to="/report">
           <li className="list-group-item d-flex align-items-center" style={{ background: 'none', border: 'none' }}>
             <i className="fa-solid fa-flag text-warning me-2"></i>
-            <span className="sideMenuText mx-3">Report</span>
-          </li>
-        </Link>
-        <Link className="my-2 p-2" to="/trend">
-          <li className="list-group-item d-flex align-items-center" style={{ background: 'none', border: 'none' }}>
-            <i className="fas fa-chart-area text-primary me-2"></i>
-            <span className="sideMenuText mx-3">Trend</span>
-          </li>
-        </Link>
-        <Link className="my-2 p-2" to="/growth">
-          <li className="list-group-item d-flex align-items-center" style={{ background: 'none', border: 'none' }}>
-            <i className="fas fa-bullseye text-success me-2"></i>
-            <span className="sideMenuText mx-3">Growth</span>
+            <span className="sideMenuText mx-3">Report &<br /> Insight</span>
           </li>
         </Link>
       </ul>
