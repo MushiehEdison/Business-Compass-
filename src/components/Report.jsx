@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import { Bar, Pie } from "react-chartjs-2";
-import { Chart as ChartJS, BarElement, CategoryScale, LinearScale, Tooltip, Legend, ArcElement } from "chart.js";
 import Alert from "./PageComponents/Alert";
-
-ChartJS.register(BarElement, CategoryScale, LinearScale, Tooltip, Legend, ArcElement);
+import TopNavBar from "./navigation/TopNavBar";
+import SideMenuBar from "./navigation/SideMenu";
 
 function Report() {
   const [reportType, setReportType] = useState("Weekly");
@@ -57,11 +56,15 @@ function Report() {
 
   return (
     <>
+ {/* components /////////////////////////////////////////////////////////////// */}
+ <div className="alerts">
+            <Alert/>
+          </div>
+          <div className="navigation">
+            <TopNavBar/>
+            <SideMenuBar/>
+          </div>
       <div className="reportSection p-4">
-        {/* Components /////////////////////////////////////////////////////// */}
-        <div className="alerts">
-          <Alert />
-        </div>
 {/* Report /////////////////////////////////////////////////////////////////// */}
         <div className="rpt">
           <h1>{reportType} Reports</h1>

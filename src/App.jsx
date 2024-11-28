@@ -1,30 +1,29 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import TopNavBar from "./components/navigation/TopNavBar";
-import SideMenuBar from "./components/navigation/SideMenu";
-import KPIs from "./components/KPIs";
+import Analytics from "./components/Analytics";
 import Report from "./components/Report";
-import Trend from "./components/Trend";
-import Growth from "./components/Growth";
+import RiskManagement from "./components/Risk";
+import IndustryInsight from "./components/industryInsight";
 import Home from "./components/home";
 function App() {
+  console.log("App is rendering");
   return (
     <Router >
       <div className=" " style={{color:'black'}}>
-        <SideMenuBar />
         <div className="content flex-grow-1">
-          <TopNavBar />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/kpis" element={<KPIs />} />
+            <Route path="/analytics" element={<Analytics />} />
             <Route path="/report" element={<Report />} />
-            <Route path="/trend" element={<Trend />} />
-            <Route path="/growth" element={<Growth />} />
+            <Route path="/riskmanagement" element={<RiskManagement />} />
+            <Route path="/industryinsight" element={<IndustryInsight />} />
           </Routes>
         </div>
       </div>
     </Router>
+
   );
 }
+
 
 export default App;

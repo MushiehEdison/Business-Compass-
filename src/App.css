@@ -5,7 +5,7 @@
     position: relative;
     color: rgb(48, 48, 48);
   }
-   .SideMenuSection a::after {
+   /* .SideMenuSection a::after {
     content: '';
     position: absolute;
     left: 0;
@@ -21,29 +21,28 @@
    .SideMenuSection a:focus::after {
     transform: scaleX(1);
     width: 60%;
-  }
+  } */
    .SideMenuSection a:hover{
-    width: 70%;
     border-radius: 0 20px 20px 0;
-    transition: 0.5s easee;
+    transition: 0.5s ease;
+    background-color: rgb(228, 228, 228);
   }
 /* Home Section ///////////////////////////////////////////////////// */
-.homeSection, .growthSection, .kpiSection, .reportSection, .trendSection{
+.homeSection, .growthSection, .analyticSection, .reportSection, .trendSection{
   position: absolute;
-  right: 0;
+  left: 180px;
   top: 100px;
-  width: 90%;
+  width: 80%;
 }
   /* Top Navbar */
   .TopNavBar {
-    z-index: 40;
     height: 90px;
     box-shadow: 0 0 5px;
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    z-index: 4;
+    z-index: 10;
   }
 /* =============================================================================== */
   .SideMenuSection:not(.bottomSideBarElement):hover {
@@ -58,6 +57,7 @@
     will-change: width;
     position: fixed;
     overflow: hidden;
+    z-index: 1;
   }
   .SideMenuSection:hover {
     width: 270px;
@@ -149,32 +149,9 @@
   font-size: 20px;
   border-radius: 0 25px 25px 0;
 }
-
 .search-button:focus {
   outline: none;
 }
-
-  /* buttom sidebar element //////////////////////////////////////////*/
-  .bottomSideBarElement {
-    position: absolute;
-    bottom: 0;
-    padding: 10px;
-  }
-  
-  .bottomSideBarElement ul {
-    flex-direction: column; 
-    transition: flex-direction 9s ease;
-    position: absolute;
-    left: -20px;
-    top: -200px;
-  }
-  .bottomSideBarElement ul li {
-     margin: 15px 0;
-  }
-  .bottomSideBarElement ul li:hover {
-    transform: scale(1.1); 
-   
-  }
 
   /* KPI For Home Page////////////////////////////////////////////////////////////// */
   .kpi-ctn .container,.daylyPerformanceScore,  .homeSection-2 .container {
@@ -347,22 +324,168 @@
   height: 100%;
   padding: 50px;
 }
-h1, h2, h3 {
+.reportSection h1,.reportSection h2,.reportSection h3 {
   color: #333;
 }
+/* Analytics  Page ///////////////////////////////////////////////////////////// */
+.analyticSection{
 
-/* Key Performance Indicators  Page ///////////////////////////////// */
-.kpiSection{
-  background-color: #333;
 }
-.kpiSection .section-1{
-  border: 1px solid ;
-  height: 100px;
-  width: 100%;
+.analyticSection h1{
+  font-size: 2rem; 
+  margin-bottom: 20px;
+}
+.analyticSection .dataVisualization, .userBehavior { 
+  background-color: #fff; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  padding: 20px;
+   margin-bottom: 20px;
+}
+.analyticSection button { 
+  color: rgb(0, 0, 0); 
+  border: none; 
+  padding: 10px; 
+  cursor: pointer; 
+  margin-right: 10px; 
+}
 
+.analyticSection .section-1{
+
+}
+/* .....................analytics component page ........................... */
+/* data vizualization ////////////////////////// */
+
+.chartContainer { 
+  background-color: #fff; border-radius: 8px;
+  padding: 20px; 
+  margin-bottom: 20px; 
+} 
+.chartTitle { 
+  font-size: 1.6rem; 
+  color: #333;
+}
+/* user behaviour //////////////////////////////// */
+/* .userBehaviorContainer {
+  border-radius: 8px;
+  height: auto;
+}
+
+.userBehaviorContainer .title {
+  font-size: 1.6em;
+  color: #333;
+}
+.userBehaviorContainer .viewButtons button {
+  border-radius: 3px;
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 10px;
+  margin-right: 20px;
+  cursor: pointer;
+  background-color: rgb(99, 99, 99);
+}
+.viewButtons button:hover  {
+ background-color: rgb(0, 0, 0);
+}
+.analyticSection .viewButtons button.active  { 
+  background-color: rgb(0, 0, 0);
+ } */
+/* timerange /////////////////////////////// */
+.timeRangeButton{
+  border-radius: 3px !important;
+  color: rgb(0, 0, 0) !important;
+  border: none !important;
+  padding: 10px !important;
+  margin-right: 20px !important;
+  cursor: pointer !important;
+  border: 1px solid gray!important;
+}
+
+.timeRangeButton:hover  { 
+  background-color: rgb(0, 0, 0) !important;
+  color: rgb(255, 255, 255) !important;
+ }
+
+/* ///////////Risk Management page //////////////////////////////////////////////////// */
+section{
+  text-align: center;
+  box-shadow: 0 1pxx 5px rgb(59, 59, 59);
+}
+
+.riskCategories ul{
+  list-style: none;
+}
+/*////////////// risk dashboard ////////////// */
+.riskDashBoard{
+  display: grid;
+  grid-template-columns: repeat(auto-fir, minmax(250px,1fr));
+  gap: 20px;
+}
+.dashboard-overview .card{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+
+  background-color: #f0f0f0;
+  border-radius: 6px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.dashboard-overview .card:hover{
+  transform: translateY(-1px);
+  box-shadow: 0 1px 2px rgb(68, 68, 68);
+}
+.dashboard-overview .card h3{
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #444444;
+}
+.dashboard-overview .card p{
+  margin: 5px 0;
+  font-size: 0.9rem;
+}
+/* Metices/////////////////// */
+
+/* risk category //////////////// */
+.riskCategories h2{
+  text-align: left;
+}
+.riskCategories li{
+  box-shadow: 0 0 3px gray;
+  border-radius: 5px;
+}
+.riskCategories li h3{
+  font-size: 1.5rem;
+}
+.riskCategories li p{
+  font-size: 0.95rem;
+}
+/* mitigation ////////////////////// */
+.mitigationPlans table{
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+.mitigationPlans th,
+.mitigationPlans td{
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid gray;
+}
+.mitigationPlans th{
+  background-color: #c5c5c5;
+  font-weight: 900;
+}
+.mitigationPlans tr:hover{
+  background-color: #969696;
 }
   /* Responsive tweaks */
   @media (max-width: 992px) {
+    .homeSection, .growthSection, .analyticSection, .reportSection, .trendSection{
+      left: auto;
+      width: 100%;
+    }
     .TopNavbarElements {
       justify-content: center;
     }

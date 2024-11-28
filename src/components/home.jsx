@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import KeyPerformanceIndicators from "./KPIs/PerformanceIndicator";
 import ActionableRec from "./Recommendations/ActionableRecom";
-import PerformanceScore from "./KPIs/PerformanceScore";
+import PerformanceScore from "./Metrices/PerformanceScore";
 import Alert from "./PageComponents/Alert";
-
+import TopNavBar from "./navigation/TopNavBar";
+import SideMenuBar from "./navigation/SideMenu";
 function Home() {
   const performanceData = [
     { title: "Time Management Score", score: 85 },
@@ -20,12 +20,16 @@ function Home() {
     { Recommendation: "preferences, and purchasing trends. Tailored marketing campaigns based on insights can enhance customer engagement, conversion rates, and ROI. Focus on digital channels like social media, email marketing, and SEO to maximize reach and maintain a competitive edge"}
   ];
   return (
-    <>
-    <div className="homeSection">
-      {/* Components/////////////////////////////////////////////////////////////// */}
+    <> 
+    {/* Components/////////////////////////////////////////////////////////////// */}
           <div className="alerts">
             <Alert/>
           </div>
+          <div className="navigation">
+            <TopNavBar/>
+            <SideMenuBar/>
+          </div>
+    <div className="homeSection">
       {/* Key Performance indicators ////////////////////////////////////////////// */}
     <div className="homeSection-1">
         <div className="title m-3">
@@ -44,8 +48,7 @@ function Home() {
     </div>
         {/* KPI CHARTS ////////////////////////////////////////////////////////////// */}
          <div className="KPIcharts">
-               <KeyPerformanceIndicators />
-               <Link className="DetailsLink p-3" to='/kpi'><span > Details </span></Link>
+
           </div> 
         {/* Actionalble Recommendations ///////////////////////////////////////////// */}
       <div className="homeSection-2 ">
