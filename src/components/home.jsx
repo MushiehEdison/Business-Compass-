@@ -46,15 +46,18 @@ function Home() {
             </div>
         </div>
     </div>
-        {/* KPI CHARTS ////////////////////////////////////////////////////////////// */}
-         <div className="KPIcharts">
-
-          </div> 
+        {/* Rank in the industry  ////////////////////////////////////////////////////////////// */}
+      `<div className="IndustryPosition p-5">
+      <i class="fa-solid fa-ranking-star"></i>
+            <div className="position"> You position in the Entertainment Industry has just Increases to <span className="text-">5th</span> postion</div>
+                <div className="viewRanks"><Link to="/industryinsight"> view ranks </Link></div>
+        </div>`
         {/* Actionalble Recommendations ///////////////////////////////////////////// */}
       <div className="homeSection-2 ">
          <div className="title m-5">
             <span className="display-5 m-3">Actionable Recommendations</span>
          </div>
+         
         <div className="container">
           {Recommendation.map((data, index) => (
             <div className="recommendationSection col-lg" key={index}>

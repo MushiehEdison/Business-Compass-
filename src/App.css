@@ -154,26 +154,11 @@
 }
 
   /* KPI For Home Page////////////////////////////////////////////////////////////// */
-  .kpi-ctn .container,.daylyPerformanceScore,  .homeSection-2 .container {
+.container,.daylyPerformanceScore,  .homeSection-2 .container {
     display: flex;
     flex-wrap: wrap; 
     justify-content: space-around;
     gap: 20px;
-  }
-  .kpi-item {
-    flex: 1 1 400px; 
-    min-width: 300px;
-    padding: 10px;
-    box-sizing: border-box;
-    box-shadow: 0 0 3px gray;
-    border-radius: 10px;
-    height: 100%;
-  }
-  .kpi-item h3{
-    margin: 0.6em 0.5em;
-  }
-  .KPIcharts{
-
   }
   .DetailsLink{
     text-decoration: none;
@@ -183,43 +168,6 @@
     border: none;
     background-color: none;
   }
-/* DropDown KPI filter For home Page/////////////////////////////////////////////////////////// */
-.dropDown{
-  position: relative;
-  display: inline-block;
-}
-.filterKpi, .filterReport{
-  padding: 10px;
-  margin: 10px 0;
-  background: rgb(243, 243, 243);
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  color: rgb(0, 0, 0);
-  font-size: 1.1rem;
-  width: auto;
-}
-.filterMenu{
-  position: absolute;
-  width: 100%;
-  top: 100%;
-  left: 0;
-  z-index: 1;
-}
-.filterMenu a{
-  display: block;
-  width: 100%;
-  padding: 8px;
-  background: none;
-  text-align: left;
-  cursor: pointer;
-  text-decoration: none;
-  color: black;
-
-}
-.filterMenu a:hover{
-  background-color: rgb(206, 206, 206);
-}
   /*RecommendationSection On HomePage////////////////////////////////////////////*/
   .recommendationSection{
     border: 1px solid gray;
@@ -239,18 +187,23 @@
     box-shadow: 0 1px 2px;
     transition: transform 0.5s ease;
   }
-  /*download  Button Container for download ////////////////////////////////////////////////////////////// */
- .download{
-  position: absolute;
-  right: 10px;
-  top: 10px;
- }
- .buttonContainer button{
-    border: none;
-    background-color: rgb(27, 27, 27);
-    border-radius: 10px;
-    color: white;
- }
+  /* Ranking on home page ////////////////////////////////////// */
+  .IndustryPosition{
+    box-shadow: 0 0 3px rgb(147, 147, 147);
+    border-radius: 4px;
+    text-align: center;
+    font-size: 2rem;
+  }
+  .IndustryPosition .fa-ranking-star{
+    position: absolute;
+    left: 50px;
+    color: rgb(67, 67, 67);
+  }
+  .IndustryPosition .viewRanks{
+    font-size: 1rem;
+    position: absolute;
+    right: 50px;
+  }
 /*  Alerts Container for Notifications ////////////////////////////////////////////////////// */
 .alerts{
   position: fixed;
@@ -421,13 +374,21 @@ section{
   grid-template-columns: repeat(auto-fir, minmax(250px,1fr));
   gap: 20px;
 }
+.riskDashBoard h2{
+  text-align: left;
+  font-size: 2rem;
+}
+.riskDashBoard p{
+  text-align: left;
+  font-size: 1.1rem;
+}
+
 .dashboard-overview .card{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   font-size: 1rem;
-
   background-color: #f0f0f0;
   border-radius: 6px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
